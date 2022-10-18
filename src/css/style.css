@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon/icomoon.eot?srf3rx");
+  src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Space Mono", Arial, serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4d4d4d;
+  background: #fff;
+}
+
+a:hover, a:active, a:focus {
+  color: #FF9000;
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 30px;
+}
+
+h1, h2, h3, h4, h5, h6, figure {
+  color: #000;
+  font-family: "Space Mono", Arial, serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+}
+
+#resume {
+	background: #D3D3D3;
+	border-radius: 10px;
+}
+
+#inres {
+	background: #FFF;
+	border-radius: 10px;
+}
+
+.select:hover{
+	cursor:pointer;
+} 
+
+.hovhighlight:hover{
+  background-color: #F5F5F5;
+}
+
+.floatcard {
+    margin-top: 20px;
+    margin-right: 0px;
+    margin-left: 30px;
+    box-shadow: 0 0 10px #D3D3D3;
+    padding:10px 15px 10px 15px;
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

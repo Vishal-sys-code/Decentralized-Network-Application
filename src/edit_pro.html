@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Edit Profile</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+           <nav class="navbar navbar-light navbar-fixed-top" style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">Connectify</a>
+              </div>
+              <form class="navbar-form navbar-right" action="user.html">
+                <div class="form-group">
+                  <input type="text" name="user" class="form-control" placeholder="Find People!">
+                </div>
+                <button type="submit" class="btn btn-default">Search</button>
+              </form>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">Profile</a></li>
+                <li><a href="verify.html">Verify</a></li>
+                <li><a href="edit_pro.html">Edit Profile</a></li>
+                <li><a href="connections.html">Connections</a></li>
+              </ul>
+            </div>
+          </nav>
+      </div>
+    </div>
+    <br/><br/><br/><br/>
+    <div id="loader"> Loading...</div>
+    <div id="mainContent" hidden>
+    <div class="container">
+      <div class="row">
+        <h3>&nbsp Personal Details</h3>
+        <div class="col-lg-6">
+          <form class="form">
+            <div class="form-group">
+              <label class="control-label" for="phone">Name</label>
+              <input class="form-control" id="name" placeholder="">
+            </div>
+            <div class="form-group">
+              <label class="control-label" for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="">
+            </div>
+            <div class="form-group">
+              <label class="control-label" for="add">Profile picture URL</label>
+                <input class="form-control" id="image" placeholder="">
+            </div>
+          </form> 
+        </div>
+        <div class="col-lg-6">          
+          <form">
+            <div class="form-group">
+              <label for="description">About</label>
+              <textarea class="form-control" id="bio" rows="7"></textarea> 
+            </div>
+          </form>
+        </div>
+      </div>
+      <button type="button" onclick="App.editProfile()"class="btn btn-primary">Update</button>
+    </div>
+
+    <br/>
+
+    <div class="container" id="resume">
+      
+      <br/>
+      <div class="row">
+        <div class="col-lg-12" id="pointSections">
+          <div class="panel-group">
+            <div class="panel panel-info" id="acadamics">
+              <div class="panel-heading text-center"><h2><strong>Academics</strong></h2></div>
+              <div class="panel-body">
+                <div id="acadpt1">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <h3 id="acad1"><strong>Acad achive 1</strong></h3>
+                    </div>
+                    <div class="col-lg-6">
+                      <h4 class="text-right">Jan 2019</h4>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <p>
+                        point 1<br/>point 2<br/>point 3<br/>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseverifylist" aria-expanded="false" aria-controls="collapseverifylist">
+                       List of Verifiers
+                      </button>
+                      <div class="collapse" id="collapseverifylist">
+                        <div class="card card-body">
+                          <ul class="list-group">
+                            <li class="list-group-item" style="border: none;">point 1   <span class="glyphicon glyphicon-ok"></span><br/></li>
+                            <li class="list-group-item" style="border: none;">point 2   <span class="glyphicon glyphicon"></span><br/></li>
+                          </ul>
+                          <form class="form-inline">
+                            <input class="form-control">
+                            <button type="button" class="btn btn-primary">Add</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <button type="button" class="btn btn-danger pull-right">Delete</button>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel-info" id="projects">
+              <div class="panel-heading text-center"><h2><strong>Projects</strong></h2></div>
+              <div class="panel-body">
+                <div id="projpt1">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <h3 id="prog1"><strong>proj1 1</strong></h3>
+                    </div>
+                    <div class="col-lg-6">
+                      <h4 class="text-right">Jan 2019</h4>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <p>
+                        point 1<br/>point 2<br/>point 3<br/>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseverifylist3" aria-expanded="false" aria-controls="collapseverifylist3">
+                       List of Verifiers
+                      </button>
+                      <div class="collapse" id="collapseverifylist3">
+                        <div class="card card-body">
+                          <ul class="list-group">
+                            <li class="list-group-item" style="border: none;">point 1   <span class="glyphicon glyphicon-ok"></span><br/></li>
+                            <li class="list-group-item" style="border: none;">point 2   <span class="glyphicon glyphicon"></span><br/></li>
+                          </ul>
+                          <form class="form-inline">
+                            <input class="form-control">
+                            <button type="button" class="btn btn-primary">Add</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <button type="button" class="btn btn-danger pull-right">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel-info" id="extracc">
+              <div class="panel-heading text-center"><h2><strong>Extra curricular activities</strong></h2></div>
+              <div class="panel-body">
+                <div id="eccpt1">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <h3 id="ecc1"><strong>EA 1</strong></h3>
+                    </div>
+                    <div class="col-lg-6">
+                      <h4 class="text-right">Jan 2019</h4>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <p>
+                        point 1<br/>point 2<br/>point 3<br/>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseverifylist5" aria-expanded="false" aria-controls="collapseverifylist5">
+                       List of Verifiers
+                      </button>
+                      <div class="collapse" id="collapseverifylist5">
+                        <div class="card card-body">
+                          <ul class="list-group">
+                            <li class="list-group-item" style="border: none;">point 1   <span class="glyphicon glyphicon-ok"></span><br/></li>
+                            <li class="list-group-item" style="border: none;">point 2   <span class="glyphicon glyphicon"></span><br/></li>
+                          </ul>
+                          <form class="form-inline">
+                            <input class="form-control">
+                            <button type="button" class="btn btn-primary">Add</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <button type="button" class="btn btn-danger pull-right">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br/>
+
+      <div class="container">
+        <div class="row">
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#addnewpoint" aria-expanded="true" aria-controls="addnewpoint">Add New Point</button>
+          <br/>
+          <div class="collapse" id="addnewpoint">
+            <div class="card card-body">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <br/>
+                    <form>
+                    <div class="form-group">
+                      <label class="control-label">Section</label>
+                      <input class="form-control" placeholder="Enter Section" id="inputSection">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label">Heading</label>
+                      <input class="form-control" placeholder="Enter Heading" id="inputHeading">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label">Date</label>
+                      <input class="form-control" placeholder="Enter Date (eg. Jan 2019)" id="inputDate">
+                    </div>
+                    <div class="form-group">
+                      <label for="description">Points</label>
+                      <textarea class="form-control"rows="6" placeholder="separate points with <br/>" id="inputText"></textarea> 
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="App.addPoint()">Add</button>
+                  </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br/>
+        </div>
+      </div>
+      </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/edit_pro.js"></script>
+    <script src="js/edit_pro_helper.js"></script>
+    <script src="js/generalHelper.js"></script>
+  </body>
+</html>
